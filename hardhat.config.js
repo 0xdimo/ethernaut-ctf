@@ -18,7 +18,7 @@ module.exports = {
             },
         ],
     },
-    defaultNetwork: "sepolia",
+    defaultNetwork: "hardhat",
     networks: {
         hardhat: {
             chainId: 31337,
