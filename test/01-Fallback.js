@@ -10,10 +10,7 @@ describe(CONTRACT_NAME, () => {
     let tx
 
     beforeEach(async () => {
-        [_owner, attacker] = await ethers.getSigners()
-        console.log("Before deploy")
-        console.log(_owner)
-        console.log(attacker)
+        ;[_owner, attacker] = await ethers.getSigners()
         const factory = await ethers.getContractFactory(CONTRACT_NAME)
         contract = await factory.deploy()
         await contract.deployed()
