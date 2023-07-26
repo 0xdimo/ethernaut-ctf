@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat")
 const { expect } = require("chai")
 
-const CONTRACT_NAME = "Fallback"
+const CONTRACT_NAME = "Fallout"
 
 describe(CONTRACT_NAME, () => {
     let attacker
@@ -9,7 +9,7 @@ describe(CONTRACT_NAME, () => {
     let tx
 
     beforeEach(async () => {
-        ;[attacker] = await ethers.getSigners()
+        ;[_owner, attacker] = await ethers.getSigners()
         const factory = await ethers.getContractFactory(CONTRACT_NAME)
         contract = await factory.deploy()
         await contract.deployed()
