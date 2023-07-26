@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat")
 const { expect } = require("chai")
 
-const CONTRACT_NAME = "Fallback"
+const CONTRACT_NAME = "Template"
 
 describe(CONTRACT_NAME, () => {
     let _owner
@@ -10,12 +10,11 @@ describe(CONTRACT_NAME, () => {
     let tx
 
     beforeEach(async () => {
-        ;[_owner, attacker] = await ethers.getSigners()
-        const factory = await ethers.getContractFactory(CONTRACT_NAME)
-        contract = await factory.deploy()
-        await contract.deployed()
-
-        contract = contract.connect(attacker)
+        // ;[_owner, attacker] = await ethers.getSigners()
+        // const factory = await ethers.getContractFactory(CONTRACT_NAME)
+        // contract = await factory.deploy()
+        // await contract.deployed()
+        // contract = contract.connect(attacker)
     })
 
     it("Solves the challenge", async () => {})
