@@ -15,7 +15,6 @@ describe(CONTRACT_NAME, () => {
         const factory = await ethers.getContractFactory(CONTRACT_NAME)
         contract = await factory.deploy()
         await contract.deployed()
-        console.log(contract.address)
 
         const attackerFactory = await ethers.getContractFactory(ATTACKER_CONTRACT_NAME)
         attackerContract = await attackerFactory.deploy(contract.address)
